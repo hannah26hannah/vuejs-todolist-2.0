@@ -1,0 +1,135 @@
+
+// App.vue
+#app {
+  width: 100%;
+  height: 100vh;
+  font-family: Avenir, Helvetica Neue, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  // router
+  #nav {
+    a {
+      &.router-link-exact-active {
+        color: #f9cb54;
+      }
+    }
+  }
+  #view {
+    min-height: calc(100vh - 6rem);
+  }
+  .footer {
+    height: 6rem;
+  }
+}
+
+
+#darkMode {
+  &:hover {
+    position: relative;
+    &:after {
+      content: "ON/OFF Darkmode";
+      position: absolute;
+      top: 30px;
+      bottom: 30px;
+      background-color: #f9cb54;
+      opacity: 0.8;
+      border: 1px solid #2c3e50;
+      width: 200px;
+      height: 30px;
+      border-radius: 13px;
+      line-height: 2rem;
+    }
+  }
+}
+
+
+
+// button-like component
+.done {
+  text-decoration: line-through;
+  color: lightgray;
+}
+
+.btns {
+  .add,
+  .edit,
+  .delete {
+    padding: 10px;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+  }
+  .add {
+    color: #4bf430;
+    &:hover {
+      background: #4bf430;
+      color: white;
+    }
+  }
+  .edit {
+    color: #007bff;
+    &:hover {
+      background: #007bff;
+      color: white;
+    }
+  }
+  .delete {
+    color: #dc3545;
+    &:hover {
+      background: #dc3545;
+      color: white;
+    }
+  }
+}
+
+// report.vue
+#pieChart {
+  svg {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+// Calendar
+.cal-wrapper {
+  width: 500px;
+}
+.date-design {
+  display: inline-block;
+  border-radius: 50%;
+}
+.selected-date {
+  background-color: #f9cb54;
+}
+.hover-date:hover {
+  border: 4px solid #f9cb54;
+}
+.prev-dates {
+  color: lightgray;
+  background: none;
+}
+.dateOnly {
+  height: 20px;
+}
+.markOnly {
+  height: 12px;
+}
+
+// Calendar Control
+.isOpenClass {
+  border-bottom: 1px solid gray;
+}
+// Todo Control
+
+.isClosedClass {
+  border-top: 1px solid gray;
+}
+
+.drawBorder {
+  border-top: 1px solid gray;
+}
+.drawMiddleBorder {
+  border-right: 1px solid gray;
+}
